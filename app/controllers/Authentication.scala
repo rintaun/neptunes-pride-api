@@ -26,7 +26,7 @@ object Authentication extends Controller {
 
     fAuthToken.map { token =>
       Ok(Json.obj(
-        "auth-token" -> token.token
+        "auth_token" -> token.token
       ))
     }.recover {
       case _ =>
