@@ -131,7 +131,7 @@ object FullUniverseReportParsers extends ResponseParsers {
           case 0 => PlayerConcededResult.active
           case 1 => PlayerConcededResult.quit
           case 2 => PlayerConcededResult.awayFromKeyboard
-          case 3 => PlayerCondededResult.ko
+          case 3 => PlayerConcededResult.ko
           case 4 => PlayerConcededResult.bot
         },
         ready = (jsonPlayer \ "ready").as[Int] != 0,
