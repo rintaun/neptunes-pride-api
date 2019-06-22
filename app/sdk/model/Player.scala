@@ -43,7 +43,7 @@ case class PlayerTechLevel(
 
 object PlayerConcededResult extends Enumeration {
   type ConcededResult = Value
-  val active, awayFromKeyboard, quit = Value
+  val active, awayFromKeyboard, quit, ko, bot = Value
 
   implicit val fmt: Format[ConcededResult] = new Format[ConcededResult] {
     def reads(json: JsValue): JsResult[ConcededResult] = Try(PlayerConcededResult.withName(json.as[String])) match {
